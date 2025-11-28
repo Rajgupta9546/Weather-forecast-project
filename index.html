@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <header>
+        <h1>🌦 Weather Forecast</h1>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+            <button id="locationBtn">📍 Use My Location</button>
+            <select id="recentDropdown" class="hidden"></select>
+        </div>
+
+        <div id="errorBox" class="error hidden"></div>
+    </header>
+
+    <main>
+        <section class="current-weather">
+            <h2 id="cityName">--</h2>
+
+            <div class="temp-row">
+                <img id="weatherIcon" class="icon">
+                <h1 id="temperature">--°C</h1>
+            </div>
+
+            <button id="toggleUnit">Switch to °F</button>
+
+            <p id="condition">--</p>
+
+            <div class="details">
+                <p>Humidity: <span id="humidity">--</span>%</p>
+                <p>Wind: <span id="wind">--</span> km/h</p>
+            </div>
+
+            <div id="alertBox" class="alert hidden"></div>
+        </section>
+
+        <section class="forecast">
+            <h2>5-Day Forecast</h2>
+            <div id="forecastContainer" class="forecast-cards"></div>
+        </section>
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

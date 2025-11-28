@@ -1,0 +1,213 @@
+/* -----------------------
+   FIXED DARK BACKGROUND
+-------------------------*/
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #1f618a;  /* FIXED single color */
+    color: white;
+}
+
+/* Center container */
+.app-container {
+    width: 90%;
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* -----------------------
+   HEADER STYLING
+-------------------------*/
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+/* Search section */
+.search-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-section input,
+.search-section select {
+    padding: 12px;
+    width: 200px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background: #1e1e1e;
+    color: #fff;
+}
+
+.search-section input::placeholder {
+    color: #aaa;
+}
+
+/* Buttons */
+button {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #00eaff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #00bcd4;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* -----------------------
+   ERROR + ALERTS
+-------------------------*/
+.error, .alert {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    border-left: 5px solid;
+    border-radius: 8px;
+    background: #000000;
+    text-align: center;
+}
+
+.error {
+    border-color: #040101;
+    color: #ffb3b3;
+}
+
+.alert {
+    border-color: #ffc14d;
+    color: #ffe2a6;
+}
+
+/* -----------------------
+   CURRENT WEATHER SECTION
+-------------------------*/
+.current-weather {
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+
+    background: #f3f6f6;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(226, 247, 247);
+    background-image:url(jessica-smith-B9Nw6aFo1fU-unsplash.jpg) ;
+}
+
+.current-weather h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.temp-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.temp-row .icon {
+    width: 70px;
+    margin-right: 15px;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.details p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* -----------------------
+   FORECAST SECTION
+-------------------------*/
+.forecast {
+    margin-top: 40px;
+}
+
+.forecast h2 {
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.forecast-cards {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.forecast-cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+.forecast-cards::-webkit-scrollbar-thumb {
+    background: #00eaff;
+    border-radius: 4px;
+}
+
+/* Forecast card */
+.card {
+    min-width: 140px;
+    padding: 15px;
+    background: #0e9ba0;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    flex-shrink: 0;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* -----------------------
+   MEDIA QUERIES
+-------------------------*/
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    #temperature { font-size: 2.5rem; }
+    .search-section input, .search-section select { width: 150px; }
+    .card { min-width: 120px; padding: 10px; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.7rem; }
+    #temperature { font-size: 2rem; }
+    .temp-row { flex-direction: column; }
+    .temp-row .icon { margin-right: 0; margin-bottom: 10px; }
+    .search-section { flex-direction: column; }
+    .search-section input, .search-section select { width: 100%; }
+    .card { min-width: 100px; padding: 8px; font-size: 0.9rem; }
+}
